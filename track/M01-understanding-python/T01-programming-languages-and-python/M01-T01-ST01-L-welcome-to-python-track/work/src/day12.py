@@ -137,7 +137,7 @@ match signal:
     case "green": print("Go")
     case _: print("Invalid")
 
-# 21. 1 to 20
+# 21. 1 to 20          for loop 
 for i in range(1, 21): print(i)
 
 # 22. Multiplication table

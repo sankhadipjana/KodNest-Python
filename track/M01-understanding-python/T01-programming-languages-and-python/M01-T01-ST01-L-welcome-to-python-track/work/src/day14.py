@@ -510,3 +510,160 @@ for i in range(n):
         print(coef, end=" ")
         coef = coef * (i - j) // (j + 1)
     print()
+
+
+
+
+
+    # ==============================
+# 10 More Different Pattern Programs
+# ==============================
+
+# 1. Left-Aligned Triangle (with spaces)
+print("1. Left-Aligned Triangle")
+n = 5
+for i in range(1, n+1):
+    print("*" * i + " " * (n - i))
+print()
+
+# 2. Right-Aligned Triangle
+print("2. Right-Aligned Triangle")
+n = 5
+for i in range(1, n+1):
+    print(" " * (n - i) + "*" * i)
+print()
+
+# 3. Hollow Pyramid
+print("3. Hollow Pyramid")
+n = 5
+for i in range(1, n+1):
+    if i == 1 or i == n:
+        print(" " * (n - i) + "*" * (2 * i - 1))
+    else:
+        print(" " * (n - i) + "*" + " " * (2 * i - 3) + "*")
+print()
+
+# 4. Inverted Hollow Pyramid
+print("4. Inverted Hollow Pyramid")
+n = 5
+for i in range(n, 0, -1):
+    if i == 1 or i == n:
+        print(" " * (n - i) + "*" * (2 * i - 1))
+    else:
+        print(" " * (n - i) + "*" + " " * (2 * i - 3) + "*")
+print()
+
+# 5. Number Pyramid (same number in each row)
+print("5. Number Pyramid (same number)")
+n = 5
+for i in range(1, n+1):
+    print(" " * (n - i) + (str(i) + " ") * i)
+print()
+
+# 6. Alphabet Pyramid (A B C ...)
+print("6. Alphabet Pyramid")
+n = 5
+for i in range(1, n+1):
+    print(" " * (n - i), end="")
+    for j in range(i):
+        print(chr(65 + j), end=" ")
+    print()
+print()
+
+# 7. Continuous Alphabet Triangle
+print("7. Continuous Alphabet Triangle")
+n = 5
+ch = 65  # ASCII of 'A'
+for i in range(1, n+1):
+    for j in range(i):
+        print(chr(ch), end=" ")
+        ch += 1
+    print()
+print()
+
+# 8. Butterfly Pattern
+print("8. Butterfly Pattern")
+n = 5
+# Upper half
+for i in range(1, n+1):
+    print("*" * i + " " * (2 * (n - i)) + "*" * i)
+# Lower half
+for i in range(n, 0, -1):
+    print("*" * i + " " * (2 * (n - i)) + "*" * i)
+print()
+
+# 9. Hourglass Pattern
+print("9. Hourglass Pattern")
+n = 5
+# Upper inverted pyramid
+for i in range(n, 0, -1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
+# Lower pyramid
+for i in range(2, n+1):
+    print(" " * (n - i) + "*" * (2 * i - 1))
+print()
+
+# 10. Cross / Plus Pattern
+print("10. Cross / Plus Pattern")
+n = 5
+for i in range(n):
+    for j in range(n):
+        if i == n//2 or j == n//2:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    print()
+
+
+
+rows = int(input("Enter the number of rows: "))
+
+# Upper half
+for i in range(1, rows + 1):
+
+    # Print spaces
+    for j in range(rows - i):
+        print(" ", end=" ")
+
+    # Print stars
+    for j in range(2 * i - 1):
+        if j == 0 or j == 2 * i - 2:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+
+    print()
+
+rows =4
+
+# Upper half
+for i in range(1, rows + 1):
+
+    # Print spaces
+    for j in range(rows - i):
+        print(" ", end=" ")
+
+    # Print stars
+    for j in range(2 * i - 1):
+        if j == 0 or j == 2 * i - 2:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+
+    print()
+
+# Lower half
+for i in range(rows, 0, -1):
+
+    # Print spaces
+    for j in range(rows - i):
+        print(" ", end=" ")
+
+    # Print stars
+    for j in range(2 * i - 1):
+        if j == 0 or j == 2 * i - 2:
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+
+    print()
